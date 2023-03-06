@@ -10,4 +10,4 @@ app.post('/', (req, res) => {
   res.send({ msg: 'request execute successfully' });
 });
 
-app.listen(4000);
+app.listen(process.env.port || 4000);
