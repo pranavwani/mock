@@ -18,4 +18,9 @@ app.get('/', (req, res) => {
   res.json(records)
 })
 
+app.delete('/', (req, res) => {
+  records.splice(0, records.length)
+  res.json(records)
+})
+
 app.listen(process.env.port || 8547);
