@@ -9,6 +9,8 @@ const records = []
 app.post('/', (req, res) => {
   if (!req.body.title) return res.status(500).send(req.body);
 
+  records.push(req.body)
+
   res.json(req.body);
 });
 
